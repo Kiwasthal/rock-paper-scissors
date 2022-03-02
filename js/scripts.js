@@ -1,3 +1,7 @@
+let countPlayer = 0
+let countComputer = 0
+let score = [countPlayer,countComputer]
+
 function computerPlay() {
    computerSelection = Math.random()
    if (computerSelection<= 0.333) {
@@ -19,15 +23,15 @@ playerSelection = playerPlay()
 computerSelection = computerPlay()
 
 if (playerSelection === computerSelection) {
-    return alert(`You picked ${playerSelection} and computer picked ${computerSelection}! It's a Tie!`)
+     alert(`You picked ${playerSelection} and computer picked ${computerSelection}! It's a Tie!`)
+     return score [countPlayer,countComputer]
 } else if ( playerSelection === "SCISSORS" && computerSelection === "PAPER" || playerSelection === "PAPER" && computerSelection === "ROCK" || playerSelection === "ROCK" && computerSelection === "SCISSORS") {
     alert(`You picked ${playerSelection} and the computer picked ${computerSelection}! You win!!!`)
+    return score = [++countPlayer,countComputer]
 } else {
     alert(`You picked ${playerSelection} and the computer picked ${computerSelection}! You loose.`)
+    return score = [countPlayer, ++countComputer]
 }
-return playerSelection , computerSelection
+}
 
-}
-const playerSelection = "rock"
-const computerSelection = computerPlay
-console.log(playRound(playerSelection,computerSelection) )
+console.log(score)
