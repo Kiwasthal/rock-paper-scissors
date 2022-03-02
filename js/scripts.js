@@ -46,4 +46,17 @@ if (playerSelection === computerSelection) {
 // score as returned via array
 }
 
+// Creating a game function that plays a game of five rounds //
 
+function game() {
+    for (let i=0 ; i < 5 ; i++) {
+        playRound()
+    }
+    if (countPlayer > countComputer) {
+        alert("You win!Bravo!") ;
+    } else if (countPlayer < countComputer) {
+        alert("You lost!Better luck next time") ;
+    } else { alert("It's a tie game!") ; } 
+}
+
+//Well it seems to be working but there are rather many ties!!
