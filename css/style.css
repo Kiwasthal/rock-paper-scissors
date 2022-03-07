@@ -1,0 +1,201 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    min-height: 100vh;
+   
+}
+
+
+
+.main-header {
+    display: flex;
+    justify-content: center;
+    background-color: 157, 181, 178 ;
+    height: 50px;
+    align-items: center;
+    font-size: 18px;
+    background-color: #1f2937;;
+    color: aliceblue;
+    font-family:monospace
+}
+
+.eevelutions {
+    font-size: small;
+}
+
+.sub-header {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: #1f2937;
+    padding-bottom: 15px;   
+    color: aliceblue;
+    font-size: 10px;
+}
+
+.text-display {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #813772;
+  height: 70px;
+}
+
+.test {
+    display: flex;
+    justify-content: center;
+    border: aliceblue 5px solid;
+    padding-top: 0px;
+    padding-left: 200px;
+    padding-right: 200px;
+    align-items: center;
+    align-content: center;
+    font-size: 24px;
+    font-weight: bolder;
+    color: aliceblue;
+}
+
+.score-display {
+    background-color: #813772;
+    display: flex;
+    justify-content: center;
+    gap: 350px ;
+    padding: 20px;
+    
+}
+
+.player-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:  30px;
+    font-size: 40px;
+    color: aliceblue;
+}
+
+.computer-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:  20px;
+    font-size: 40px;
+    color: aliceblue;
+}
+
+.card-display {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #813772;
+    align-items: center;
+    height: 500px;
+    
+    
+}
+
+
+.card {
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    border-color: aliceblue;
+    border: 2px solid  rgb(233, 204, 170);
+    border-radius: 20px;
+    box-shadow: -30px 30px 20px 0px  rgba(0,0,0,0.3) ;
+    background: rgb(208,109,195);
+    background: radial-gradient(circle, rgba(208,109,195,1) 0%, rgba(218,13,213,1) 100%);
+    color: aliceblue;
+    
+}
+
+.card-jolteon {
+    display: flex;
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    border-color: aliceblue;
+    border: 2px solid  rgb(233, 204, 170);
+    border-radius: 20px;
+    box-shadow: -30px 30px 20px 0px  rgba(0,0,0,0.3) ;
+    background-color: #cfc316ce;
+    color: aliceblue;
+}
+
+.card-flareon {
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    border-color: aliceblue;
+    border: 2px solid  rgb(233, 204, 170);
+    border-radius: 20px;
+    box-shadow: -30px 30px 20px 0px  rgba(0,0,0,0.3) ;
+    background-color: #B82601;
+    color: aliceblue;
+}
+
+.card-vaporeon {
+    width: 250px;
+    align-items: center;
+    justify-content: center;
+    border-color: aliceblue;
+    border: 2px solid  rgb(233, 204, 170);
+    border-radius: 20px;
+    box-shadow: -30px 30px 20px 0px  rgba(0,0,0,0.3) ;
+    background-color: #062F4F ;
+    color: aliceblue;
+}
+
+h2 {
+    text-align: center;
+    font-size: 10px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.content {
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+button {
+    color: black;
+    background: aliceblue;    
+    border-radius: 20px;
+    font-size: 30px;
+    padding-left: 15px ;
+    padding-right: 15px;
+     ;
+}
+
+.footer {
+    display: flex;
+    padding: 18.5px;
+    background-color: #1f2937;
+    color: #E5E7EB;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+
+}
+.copyright {
+    display: flex;
+    align-self: center;
+    align-items: center;
+}
