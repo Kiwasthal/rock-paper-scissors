@@ -4,15 +4,21 @@ let countPlayer = 0 ;
 let countComputer = 0 ;
 let score = [countPlayer,countComputer] ;
 
+// Reference the three buttons we need to make a player choice
+
+let btnLeft = document.getElementById('jolteon');
+let btnCenter = document.getElementById('vaporeon');
+let btnRight = document.getElementById('flareon');
+
 // Makes "random" choice for computer :
 
 function computerPlay() {
    computerSelection = Math.random() ;
    if (computerSelection<= 0.333) {
-         computerSelection = "ROCK" ;
+         computerSelection = "jolteon" ;
    } else if (computerSelection <= 0.666) {
-                computerSelection = "PAPER" ;
-   } else { computerSelection = "SCISSORS" ;
+                computerSelection = "flareon" ;
+   } else { computerSelection = "vaporeon" ;
  }
    return computerSelection ;
 }
@@ -20,27 +26,46 @@ function computerPlay() {
 // Asks user to make a choice :
 
 function playerPlay() {
+      btnLeft.addEventListener ('click' , function() {
 
-    let playerSelection= prompt("Rock, Paper or Scissors?") ;
-    playerSelection = playerSelection.toUpperCase() ;
-    
-    return playerSelection ;
+      }) ;
 }
+//When player presses a button fire-up consequece of playRound
+
+btnLeft.addEventListener ('click' , () => {
+      playRound( "jolteon" , );
+})
+
+btnCenter.addEventListener('click', () => {
+      playRound("vaporeon" , );
+})      
+      
+
+btnRight.addEventListener('click', () => {
+      playRound( "flareon" , );
+})      
+
+
+
+
+test.textContent = "it's a tie"
+
 
 // Takes computer choice and player choice functions and plays a single round :
 
 function playRound( playerSelection, computerSelection ) {
 
-  playerSelection = playerPlay() ;
+  
   computerSelection = computerPlay() ;
 
 
 if (playerSelection === computerSelection) {
-      alert(`You picked ${playerSelection} and computer picked ${computerSelection}! It's a Tie!`) ; // to be removed //
+      alert("a tie")
+      document.getElementsByClassName("test").textContent = "I have changed!";
       return score [countPlayer,countComputer] ;
-} else if ( playerSelection === "SCISSORS" && computerSelection === "PAPER" || 
-              playerSelection === "PAPER" && computerSelection === "ROCK" || 
-                playerSelection === "ROCK" && computerSelection === "SCISSORS") {
+} else if ( playerSelection === "jolteon" && computerSelection === "vaporeon" || 
+              playerSelection === "vaporeon" && computerSelection === "flareon" || 
+                playerSelection === "flareon" && computerSelection === "jolteon") {
                   alert(`You picked ${playerSelection} and the computer picked ${computerSelection}! You win!!!`) ; // to be removed
                   return score = [++countPlayer,countComputer];
 } else {

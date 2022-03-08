@@ -37,21 +37,19 @@ body {
 .text-display {
   display: flex;
   justify-content: center;
-  padding: 20px;
   background-color: #813772;
-  height: 70px;
+ 
 }
 
-.test {
+h4 {
     display: flex;
     justify-content: center;
-    border: aliceblue 5px solid;
     padding-top: 0px;
     padding-left: 200px;
     padding-right: 200px;
     align-items: center;
     align-content: center;
-    font-size: 24px;
+    font-size:27px;
     font-weight: bolder;
     color: aliceblue;
 }
@@ -90,7 +88,7 @@ body {
     justify-content: space-evenly;
     background-color: #813772;
     align-items: center;
-    height: 500px;
+    height: 508px;
     
     
 }
