@@ -10,6 +10,7 @@ let btnLeft = document.getElementById('jolteon');
 let btnCenter = document.getElementById('vaporeon');
 let btnRight = document.getElementById('flareon');
 
+
 // Makes "random" choice for computer :
 
 function computerPlay() {
@@ -23,13 +24,13 @@ function computerPlay() {
    return computerSelection ;
 }
 
-// Asks user to make a choice :
+// // // Asks user to make a choice :
 
-function playerPlay() {
-      btnLeft.addEventListener ('click' , function() {
+// // function playerPlay() {
+// //       btnLeft.addEventListener ('click' , function() {
 
-      }) ;
-}
+// //       }) ;
+// }
 //When player presses a button fire-up consequece of playRound
 
 btnLeft.addEventListener ('click' , () => {
@@ -46,11 +47,6 @@ btnRight.addEventListener('click', () => {
 })      
 
 
-
-
-test.textContent = "it's a tie"
-
-
 // Takes computer choice and player choice functions and plays a single round :
 
 function playRound( playerSelection, computerSelection ) {
@@ -60,17 +56,18 @@ function playRound( playerSelection, computerSelection ) {
 
 
 if (playerSelection === computerSelection) {
-      alert("a tie")
-      document.getElementsByClassName("test").textContent = "I have changed!";
+      document.getElementById('display').textContent = `Both trainers picked ${computerSelection}. It's a tie!`;
       return score [countPlayer,countComputer] ;
 } else if ( playerSelection === "jolteon" && computerSelection === "vaporeon" || 
               playerSelection === "vaporeon" && computerSelection === "flareon" || 
                 playerSelection === "flareon" && computerSelection === "jolteon") {
-                  alert(`You picked ${playerSelection} and the computer picked ${computerSelection}! You win!!!`) ; // to be removed
-                  return score = [++countPlayer,countComputer];
+                  document.getElementById('display').textContent = `You picked ${playerSelection} and opponent picked ${computerSelection}. You win!`
+                  document.getElementById('playerScore').textContent = ++countPlayer
+                  return score = [countPlayer,countComputer];
 } else {
-    alert(`You picked ${playerSelection} and the computer picked ${computerSelection}! You lose.`) ; // to be removed //
-    return score = [countPlayer, ++countComputer];  //score is returned as an array 
+    document.getElementById('display').textContent = `You picked ${playerSelection} and opponent picked ${computerSelection}. You lose!`
+    document.getElementById('computerScore').textContent = ++countComputer
+    return score = [countPlayer, countComputer];  //score is returned as an array 
 }
 }
 
