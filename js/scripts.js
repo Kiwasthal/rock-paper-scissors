@@ -10,7 +10,6 @@ let btnLeft = document.getElementById('jolteon');
 let btnCenter = document.getElementById('vaporeon');
 let btnRight = document.getElementById('flareon');
 
-
 // Makes "random" choice for computer :
 
 function computerPlay() {
@@ -24,14 +23,48 @@ function computerPlay() {
    return computerSelection ;
 }
 
-// // // Asks user to make a choice :
+// Takes computer choice and player choice functions and plays a single round :
+// Alters HTML texts to match score and displays
 
-// // function playerPlay() {
-// //       btnLeft.addEventListener ('click' , function() {
+function playRound( playerSelection, computerSelection ) {
 
-// //       }) ;
-// }
-//When player presses a button fire-up consequece of playRound
+  
+  computerSelection = computerPlay() ;
+
+
+if (playerSelection === computerSelection) {
+      document.getElementById('display').textContent = `Both trainers picked ${computerSelection}. It's a tie!`;
+      
+} else if ( playerSelection === "jolteon" && computerSelection === "vaporeon" || 
+              playerSelection === "vaporeon" && computerSelection === "flareon" || 
+                playerSelection === "flareon" && computerSelection === "jolteon") {
+                  document.getElementById('display').textContent = `You picked ${playerSelection}
+                   and opponent picked ${computerSelection}. You win!`;
+                  document.getElementById('playerScore').textContent = ++countPlayer ;                 
+} else {
+    document.getElementById('display').textContent = `You picked ${playerSelection}
+     and opponent picked ${computerSelection}. You lose!` ;
+    document.getElementById('computerScore').textContent = ++countComputer ;
+}
+//Checks if a score equals to 5 and displays winner of the game.Also end game
+
+if (countPlayer === 5 ) {
+      document.getElementById('display').textContent = " You win the battle!Reload to try again";
+      //Remove buttons when game ends
+      btnLeft.remove() ;
+      btnRight.remove() ;
+      btnCenter.remove() ;
+     
+} else if (countComputer === 5) {
+      document.getElementById('display').textContent = " Opponent trainer wins.Reload to try again"; 
+      //remove buttons when game ends
+      btnLeft.remove() ;
+      btnRight.remove() ;
+      btnCenter.remove() ;
+}}
+
+// Plays round when user clicks a button
+// playRound arguement set according to corresponding button pressed
 
 btnLeft.addEventListener ('click' , () => {
       playRound( "jolteon" , );
@@ -45,45 +78,4 @@ btnCenter.addEventListener('click', () => {
 btnRight.addEventListener('click', () => {
       playRound( "flareon" , );
 })      
-
-
-// Takes computer choice and player choice functions and plays a single round :
-
-function playRound( playerSelection, computerSelection ) {
-
-  
-  computerSelection = computerPlay() ;
-
-
-if (playerSelection === computerSelection) {
-      document.getElementById('display').textContent = `Both trainers picked ${computerSelection}. It's a tie!`;
-      return score [countPlayer,countComputer] ;
-} else if ( playerSelection === "jolteon" && computerSelection === "vaporeon" || 
-              playerSelection === "vaporeon" && computerSelection === "flareon" || 
-                playerSelection === "flareon" && computerSelection === "jolteon") {
-                  document.getElementById('display').textContent = `You picked ${playerSelection} and opponent picked ${computerSelection}. You win!`
-                  document.getElementById('playerScore').textContent = ++countPlayer
-                  return score = [countPlayer,countComputer];
-} else {
-    document.getElementById('display').textContent = `You picked ${playerSelection} and opponent picked ${computerSelection}. You lose!`
-    document.getElementById('computerScore').textContent = ++countComputer
-    return score = [countPlayer, countComputer];  //score is returned as an array 
-}
-}
-
-// Creating a game function for a game of five rounds :
-
-function game() {
-    for (let i=0 ; i < 5 ; i++) {
-        playRound()
-    }
-    if (countPlayer > countComputer) {
-          alert("You win!Bravo!") ;
-    } else if (countPlayer < countComputer) {
-          alert("You lost!Better luck next time") ;
-    } else { 
-          alert("It's a tie game!") ; 
-    } 
-}
-
 

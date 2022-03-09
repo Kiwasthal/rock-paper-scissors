@@ -54,15 +54,14 @@ h4 {
     font-size:27px;
     font-weight: bolder;
     color: aliceblue;
-    width: auto;
+    width: 700px;
     text-align: center;
     padding: 10px;
     border: #E5E7EB 2px solid;
     border-radius: 20px;
     background-color: #062F4F;
     padding-left: 40px;
-    padding-right: 40px;
-   
+    padding-right: 40px; 
 }
 
 .score-display {
@@ -100,7 +99,6 @@ h4 {
     background-color: #813772;
     align-items: center;
     height: 508px;
-    height: au;
     
 }
 
