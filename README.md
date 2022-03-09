@@ -4,3 +4,5 @@ Showcasing basic problem - solving skills , using comments , basic javascript kn
 
 images taken from https://pokemondb.net/
 
+https://kiwasthal.github.io/rock-paper-scissors/
+
